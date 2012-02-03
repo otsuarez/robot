@@ -5,3 +5,5 @@ A new site can be added just by adding the relevant ini and pm files to the corr
 The engine logs to the syslog facility.
 
 This was written for an social network site and it original purpose was to gather (cultural, sports, etc) events from several other web sites.
+
+more documentation (in spanish) is available on the [[/wiki|wiki]].
