@@ -1,6 +1,7 @@
 This is a web scrapping tool written in Perl. 
 
 This program is splitted in three main components:
+
 * The sites directory. For each site to be crawled, an ini file is created and placed on this directory. Properties like the site's url and frequency of indexing are declared on this files.
 * The plugins directory. The parsing regex code is stored in Perl modules, so same syntax can be shared by more than two sites.
 * engine.pl. An script to be executed from cron. Checks the sites directory for ini files and perform the corresponding scrapping and stores the obtained data in a database.
