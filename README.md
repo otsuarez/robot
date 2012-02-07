@@ -1,9 +1,14 @@
-This is a web crawler written in Perl. A plugin architecture was choosen in order to achieve flexibility. Sites to be parsed are declared in ini files. Since the same web framework can be used for more than one site, the parser code is encapsuled in perl modules.
+This is a web scrapping tool written in Perl. 
 
-A new site can be added just by adding the relevant ini and pm files to the corresponding directories.
+This program is splitted in three main components:
+* The sites directory. For each site to be crawled, an ini file is created and placed on this directory. Properties like the site's url and frequency of indexing are declared on this files.
+* The plugins directory. The parsing regex code is stored in Perl modules, so same syntax can be shared by more than two sites.
+* engine.pl. An script to be executed from cron. Checks the sites directory for ini files and perform the corresponding scrapping and stores the obtained data in a database.
+
+A new site can be added just by adding the relevant ini and pm (if required) files to the corresponding directories.
 
 The engine logs to the syslog facility.
 
-This was written for an social network site and it original purpose was to gather (cultural, sports, etc) events from several other web sites.
+This tool was written for an social network site and its original purpose was to collect (cultural, sports, etc) events from several other social web sites.
 
 Documentation (spanish) is available on the https://github.com/otsuarez/robot/wiki.
